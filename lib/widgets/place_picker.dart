@@ -146,17 +146,17 @@ class PlacePickerState extends State<PlacePicker> {
           key: this.appBarKey,
           title: SearchInput(searchPlace),
           centerTitle: true,
-          automaticallyImplyLeading: false,
-           leading: InkWell(
-          highlightColor:Colors.transparent,
-          onTap: () {
-            Navigator.of(context).pop(true);
-          },
-          child: const Icon(
-            Icons.arrow_back_ios,
-            size: 20,
-          ),
-        ),
+          automaticallyImplyLeading: true,
+        //    leading: InkWell(
+        //   highlightColor:Colors.transparent,
+        //   onTap: () {
+        //     Navigator.of(context).pop(true);
+        //   },
+        //   child: const Icon(
+        //     Icons.arrow_back_ios,
+        //     size: 20,
+        //   ),
+        // ),
         ),
         body: Column(
           children: <Widget>[
