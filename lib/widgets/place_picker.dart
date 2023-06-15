@@ -150,8 +150,9 @@ class PlacePickerState extends State<PlacePicker> {
           leading: InkWell(
             highlightColor: Colors.transparent,
             onTap: () {
+              print('on tap here');
               _delayedPop();
-              Navigator.of(context).pop();
+              // return Future.value(false);
             },
             child: const Icon(
               Icons.arrow_back_ios,
