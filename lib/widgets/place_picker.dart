@@ -151,7 +151,7 @@ class PlacePickerState extends State<PlacePicker> {
             highlightColor: Colors.transparent,
             onTap: () {
               _delayedPop();
-              Navigator.of(context).pop(true);
+              Navigator.of(context).pop();
             },
             child: const Icon(
               Icons.arrow_back_ios,
