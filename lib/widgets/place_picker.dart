@@ -137,7 +137,7 @@ class PlacePickerState extends State<PlacePicker> {
           locationResult = null;
           _delayedPop();
           return Future.value(false);
-        }  else  {
+        } else {
           return Future.value(true);
         }
       },
@@ -146,17 +146,18 @@ class PlacePickerState extends State<PlacePicker> {
           key: this.appBarKey,
           title: SearchInput(searchPlace),
           centerTitle: true,
-          automaticallyImplyLeading: true,
-        //    leading: InkWell(
-        //   highlightColor:Colors.transparent,
-        //   onTap: () {
-        //     Navigator.of(context).pop(true);
-        //   },
-        //   child: const Icon(
-        //     Icons.arrow_back_ios,
-        //     size: 20,
-        //   ),
-        // ),
+          // automaticallyImplyLeading: true,
+          leading: InkWell(
+            highlightColor: Colors.transparent,
+            onTap: () {
+              _delayedPop();
+              Navigator.of(context).pop(true);
+            },
+            child: const Icon(
+              Icons.arrow_back_ios,
+              size: 20,
+            ),
+          ),
         ),
         body: Column(
           children: <Widget>[
@@ -203,7 +204,8 @@ class PlacePickerState extends State<PlacePicker> {
                     Padding(
                       child: Text(widget.localizationItem!.nearBy,
                           style: TextStyle(fontSize: 16)),
-                      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                     ),
                     Expanded(
                       child: ListView(
